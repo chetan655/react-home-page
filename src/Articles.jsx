@@ -1,80 +1,32 @@
 import React from "react";
-import { Card, Image} from 'semantic-ui-react'
-import { faker } from '@faker-js/faker';
-//import 'semantic-ui-css/semantic.min.css';
-
-const card1 = {
-    cardImage: faker.image.avatar(),
-    name: faker.name.fullName(),
-    meta: faker.name.jobTitle(),
-    description: faker.name.jobDescriptor(),
-    extra: faker.name.jobType()
-}
-
-const card2 = {
-    cardImage: faker.image.avatar(),
-    name: faker.name.fullName(),
-    meta: faker.name.jobTitle(),
-    description: faker.name.jobDescriptor(),
-    extra: faker.name.jobType()
-}
-
-const card3 = {
-    cardImage: faker.image.avatar(),
-    name: faker.name.fullName(),
-    meta: faker.name.jobTitle(),
-    description: faker.name.jobDescriptor(),
-    extra: faker.name.jobType()
-}
-
+import ArticleItems from "./ArticleItems";
+import { ArticleCards } from "./Cards"
+import './card.css'
 
 function Articles(){
     return(
         <div className="articles-comp">
             <p className='cards-heading'>Featured Articles</p>
-            <Card.Group className="articles-card-group">
-                <Card className="articles-card-1">
-                    <Card.Content>
-                        <Image
-                        floated='right'
-                        size='mini'
-                        src={card1.cardImage}
-                        />
-                        <Card.Header>{card1.name}</Card.Header>
-                        <Card.Meta>{card1.meta}</Card.Meta>
-                        <Card.Description>{card1.description}</Card.Description>
-                        <Card.Content extra>{card1.extra}</Card.Content>
-                    </Card.Content>
-                </Card>
-
-                <Card className="articles-card-2">
-                    <Card.Content>
-                        <Image
-                        floated='right'
-                        size='mini'
-                        src={card2.cardImage}
-                        />
-                        <Card.Header>{card2.name}</Card.Header>
-                        <Card.Meta>{card2.meta}</Card.Meta>
-                        <Card.Description>{card2.description}</Card.Description>
-                        <Card.Content extra>{card2.extra}</Card.Content>
-                    </Card.Content>
-                </Card>
-
-                <Card className="articles-card-3">
-                    <Card.Content>
-                        <Image
-                        floated='right'
-                        size='mini'
-                        src={card3.cardImage}
-                        />
-                        <Card.Header>{card3.name}</Card.Header>
-                        <Card.Meta>{card3.meta}</Card.Meta>
-                        <Card.Description>{card3.description}</Card.Description>
-                        <Card.Content extra>{card3.extra}</Card.Content>
-                    </Card.Content>
-                </Card>
-            </Card.Group>
+                <div className="row">
+                    <ArticleItems 
+                    image = {ArticleCards[0].image}
+                    header = {ArticleCards[0].header}
+                    meta = {ArticleCards[0].meta}
+                    description = {ArticleCards[0].description}
+                    extra = {ArticleCards[0].extra}/>
+                    <ArticleItems 
+                    image = {ArticleCards[1].image}
+                    header = {ArticleCards[1].header}
+                    meta = {ArticleCards[1].meta}
+                    description = {ArticleCards[1].description}
+                    extra = {ArticleCards[1].extra}/>
+                    <ArticleItems 
+                    image = {ArticleCards[2].image}
+                    header = {ArticleCards[2].header}
+                    meta = {ArticleCards[2].meta}
+                    description = {ArticleCards[2].description}
+                    extra = {ArticleCards[2].extra}/>
+                </div>
             <button className="articles-button">See All Articles</button>
         </div>
 

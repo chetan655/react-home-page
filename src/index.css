@@ -55,26 +55,6 @@ code {
 text-align: center;
 }
 
-.tutorials-card-group{
-  text-align: center;
-}
-
-.tutorials-card-1{
-  margin-right: 50px;
-  display: inline-block;
-}
-
-.tutorials-card-2{
-  margin-right: 50px;
-  margin-left: 50px;
-  display: inline-block;
-}
-
-.tutorials-card-3{
-  margin-left: 50px;
-  display: inline-block;
-}
-
 .tutorials-comp button{
   background-color: #a5a49e;
   border: none;
@@ -88,26 +68,6 @@ text-align: center;
 
 .articles-comp{
   text-align: center;
-}
-
-.articles-card-group{
-  text-align: center;
-}
-
-.articles-card-1{
-  margin-right: 50px;
-  display: inline-block;
-}
-
-.articles-card-2{
-  margin-right: 50px;
-  margin-left: 50px;
-  display: inline-block;
-}
-
-.articles-card-3{
-  margin-left: 50px;
-  display: inline-block;
 }
 
 .articles-comp button{
